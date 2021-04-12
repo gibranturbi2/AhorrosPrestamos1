@@ -138,6 +138,7 @@
       <DependentUpon>202104111438369_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Ahorros.cs" />
     <Compile Include="Models\MigracionDbContext.cs" />
     <Compile Include="Models\Prestamo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

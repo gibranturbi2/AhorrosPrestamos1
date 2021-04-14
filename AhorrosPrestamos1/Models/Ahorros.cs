@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.ComponentModel.s
+using System.ComponentModel.Schema;
 
 namespace AhorrosPrestamos1.Models
 {

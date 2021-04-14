@@ -1,0 +1,66 @@
+﻿@model AhorrosPrestamos1.Models.Prestamo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Prestamo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name_Client)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name_Client)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Interest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Interest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Share)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Share)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment_fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment_fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total_Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total_Amount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Loan }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

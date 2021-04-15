@@ -46,7 +46,7 @@ namespace AhorrosPrestamos1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_Loan,Name_Client,Amount,Interest,Share,Payment_fee,Total_Amount")] Prestamo prestamo)
+        public ActionResult Create([Bind(Include = "ID_Loan,Name_Client,Last_Name,Amount,Interest,Share,Payment_fee,Total_Amount")] Prestamo prestamo)
         {
             if (ModelState.IsValid)
             {

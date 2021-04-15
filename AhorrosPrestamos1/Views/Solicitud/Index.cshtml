@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Listado de Solicitud</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nueva Solicitud", "Create")
 </p>
 <table class="table">
     <tr>
@@ -72,7 +72,7 @@
         </td>
         <td>
             
-            @Html.ActionLink("Details", "Details", new { id=item.RequesterID }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.RequesterID }) |
            
         </td>
     </tr>

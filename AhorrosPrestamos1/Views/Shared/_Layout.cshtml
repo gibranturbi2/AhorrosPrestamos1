@@ -3,7 +3,53 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Ahorro-Presta</title>
+    <a href="~/fonts/fontawesome-webfont.eot">
+    <a href="~/fonts/fontawesome-webfont.ttf">
+    <a href="~/fonts/fontawesome-webfont.woff">
+    <a href="~/fonts/fontawesome-webfont.woff2">
+    <a href="~/fonts/FontAwesome.otf">
+    <a href="~/fonts/glyphicons-halflings-regular.eot">
+    <a href="~/fonts/glyphicons-halflings-regular.ttf">
+    <a href="~/fonts/glyphicons-halflings-regular.woff">
+    <a href="~/fonts/glyphicons-halflings-regular.woff2">
+    <a href="~/fonts/IcoMoon-Free.ttf">
+    <a href="~/fonts/ionicons.eot">
+    <a href="~/fonts/ionicons.ttf">
+    <a href="~/fonts/ionicons.woff">
+    <a href="~/fonts/montserrat-bold-webfont.eot">
+    <a href="~/fonts/montserrat-bold-webfont.ttf">
+    <a href="~/fonts/montserrat-bold-webfont.woff">
+    <a href="~/fonts/montserrat-bold-webfont.woff2">
+    <a href="~/fonts/montserrat-hairline-webfont.eot">
+    <a href="~/fonts/montserrat-hairline-webfont.ttf">
+    <a href="~/fonts/montserrat-hairline-webfont.woff">
+    <a href="~/fonts/montserrat-hairline-webfont.woff2">
+    <a href="~/fonts/montserrat-light-webfont.eot">
+    <a href="~/fonts/montserrat-light-webfont.ttf">
+    <a href="~/fonts/montserrat-light-webfont.woff">
+    <a href="~/fonts/montserrat-light-webfont.woff2">
+    <a href="~/fonts/montserrat-regular-webfont.eot">
+    <a href="~/fonts/montserrat-regular-webfont.ttf">
+    <a href="~/fonts/montserrat-regular-webfont.woff">
+    <a href="~/fonts/montserrat-regular-webfont.woff2">
+    <link href="~/fonts/montserrat-fonts.css" rel="stylesheet" />
+    <link href="~/css/animate.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/ionicons.min.css" rel="stylesheet" />
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link href="~/css/modern-business.css" rel="stylesheet" />
+    <link href="~/css/responsive.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery-1.11.0.min.js"></script>
+    <script src="~/js/jquery.isotope.min.js"></script>
+    <script src="~/js/jquery.prettyPhoto.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/own-menu.js"></script>
+    <script src="~/js/smooth-scroll.js"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -16,7 +62,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Bienvenido", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Ahorro-Presta", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -33,7 +79,54 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="container">
+                <div class="row">
+
+                    <!-- ABOUT -->
+                    <div class="col-md-3">
+                        <img class="margin-bottom-20" src="~/images/logo.png" height="80" width="200" alt="">
+                        <p>Somos un banco que cree en ti, no te cobramos por guardar tu dinero ni por moverlo y siempre te apoyaremos a cumplir tus metas.</p>
+                        <ul class="social">
+                            <li><a href="#."><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#."><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#."><i class="fa fa-google"></i></a></li>
+                            <li><a href="#."><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Get in touch -->
+                    <div class="col-md-3">
+                        <h6>Mantengase en contacto</h6>
+                        <ul class="row location">
+                            <li class="col-xs-12">
+                                <p><i class="fa fa-map-marker"></i> Av. George Washington , Santo Domingo, Republica Dominicana</p>
+                            </li>
+                            <li class="col-xs-12">
+                                <p><i class="fa fa-phone"></i> Telefono : + 809 647 6565 </p>
+                            </li>
+                            <li class="col-xs-12">
+                                <p><i class="fa fa-envelope-o"></i> Email : Ahorro-Presta@Gmail.com</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="col-md-3">
+                        <h6>Horarios</h6>
+                        <ul class="row location">
+                            <li class="col-xs-12">
+                                <p> Lunes a Viernes : 9 am to 8 pm</p>
+                            </li>
+                            <li class="col-xs-12">
+                                <p>Sabados y Domingos: 10 am to 4 pm</p>
+                            </li>
+                            <li class="col-xs-12">
+                                <p>Asistencia telefonica 24/7</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 

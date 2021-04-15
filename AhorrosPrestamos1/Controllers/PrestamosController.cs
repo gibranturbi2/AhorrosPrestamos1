@@ -20,6 +20,11 @@ namespace AhorrosPrestamos1.Controllers
             return View(db.prestamos.ToList());
         }
 
+        public ActionResult Reporte()
+        {
+            return View(db.prestamos.ToList());
+        }
+
         // GET: Prestamos/Details/5
         public ActionResult Details(int? id)
         {

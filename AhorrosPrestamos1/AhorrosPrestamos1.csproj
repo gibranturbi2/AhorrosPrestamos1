@@ -375,6 +375,7 @@
     <Content Include="Views\Solicitud\Details.cshtml" />
     <Content Include="Views\Solicitud\Index.cshtml" />
     <Content Include="Views\Prestamos\Create.cshtml" />
+    <Content Include="Views\Prestamos\Reporte.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

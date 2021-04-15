@@ -1,0 +1,61 @@
+﻿@model IEnumerable<AhorrosPrestamos1.Models.Prestamo>
+
+@{
+    ViewBag.Title = "Reporte";
+}
+
+<h2>Total de prestamos solicitados:</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name_Client)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Last_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Interest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Share)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Payment_fee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total_Amount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name_Client)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Last_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Interest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Share)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Payment_fee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total_Amount)
+        </td>
+    </tr>
+}
+
+</table>

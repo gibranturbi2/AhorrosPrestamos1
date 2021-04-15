@@ -3,10 +3,20 @@ namespace AhorrosPrestamos1.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class init1 : DbMigration
+    public partial class initial : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Account",
+                c => new
+                    {
+                        ID_Login = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Password = c.String(),
+                    })
+                .PrimaryKey(t => t.ID_Login);
+            
             CreateTable(
                 "dbo.Ahorros",
                 c => new
@@ -27,6 +37,24 @@ namespace AhorrosPrestamos1.Migrations
                 .PrimaryKey(t => t.ID_Saving);
             
             CreateTable(
+                "dbo.Prestamo",
+                c => new
+                    {
+                        ID_Loan = c.Int(nullable: false, identity: true),
+                        Name_Client = c.String(),
+                        Last_Name = c.String(),
+                        Amount = c.Double(nullable: false),
+                        Interest = c.Double(nullable: false),
+                        Share = c.Double(nullable: false),
+                        Payment_fee = c.Double(nullable: false),
+                        Total_Amount = c.Double(nullable: false),
+                        solicitud_RequesterID = c.Int(),
+                    })
+                .PrimaryKey(t => t.ID_Loan)
+                .ForeignKey("dbo.Solicitud", t => t.solicitud_RequesterID)
+                .Index(t => t.solicitud_RequesterID);
+            
+            CreateTable(
                 "dbo.Solicitud",
                 c => new
                     {
@@ -43,20 +71,16 @@ namespace AhorrosPrestamos1.Migrations
                     })
                 .PrimaryKey(t => t.RequesterID);
             
-            AddColumn("dbo.Prestamo", "Last_Name", c => c.String());
-            AddColumn("dbo.Prestamo", "solicitud_RequesterID", c => c.Int());
-            CreateIndex("dbo.Prestamo", "solicitud_RequesterID");
-            AddForeignKey("dbo.Prestamo", "solicitud_RequesterID", "dbo.Solicitud", "RequesterID");
         }
         
         public override void Down()
         {
             DropForeignKey("dbo.Prestamo", "solicitud_RequesterID", "dbo.Solicitud");
             DropIndex("dbo.Prestamo", new[] { "solicitud_RequesterID" });
-            DropColumn("dbo.Prestamo", "solicitud_RequesterID");
-            DropColumn("dbo.Prestamo", "Last_Name");
             DropTable("dbo.Solicitud");
+            DropTable("dbo.Prestamo");
             DropTable("dbo.Ahorros");
+            DropTable("dbo.Account");
         }
     }
 }

@@ -23,6 +23,7 @@ namespace AhorrosPrestamos1.Models
          public virtual DbSet<Prestamo> prestamos { get; set; }
          public virtual DbSet<Ahorros> ahorros { get; set; }
          public virtual DbSet<Solicitud> solicitud { get; set; }
+         public virtual DbSet<Account> account { get; set; }
     }
 
     //public class MyEntity

@@ -53,6 +53,9 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
@@ -128,6 +131,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AhorrosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PrestamosController.cs" />
@@ -135,11 +139,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104150456215_init1.cs" />
-    <Compile Include="Migrations\202104150456215_init1.Designer.cs">
-      <DependentUpon>202104150456215_init1.cs</DependentUpon>
+    <Compile Include="Migrations\202104151859279_initial.cs" />
+    <Compile Include="Migrations\202104151859279_initial.Designer.cs">
+      <DependentUpon>202104151859279_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Ahorros.cs" />
     <Compile Include="Models\MigracionDbContext.cs" />
     <Compile Include="Models\Prestamo.cs" />
@@ -175,6 +180,7 @@
     <Content Include="images\avatar-admin.jpg" />
     <Content Include="images\avatar-testi-1.jpg" />
     <Content Include="images\avatar-testi.jpg" />
+    <Content Include="images\bg.jpg" />
     <Content Include="images\bg\bg-1.jpg" />
     <Content Include="images\bg\bg-2.jpg" />
     <Content Include="images\bg\bg-portfolio.jpg" />
@@ -352,6 +358,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="styles\font-awesome.css" />
+    <Content Include="styles\style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -377,6 +385,12 @@
     <Content Include="Views\Solicitud\Index.cshtml" />
     <Content Include="Views\Prestamos\Create.cshtml" />
     <Content Include="Views\Prestamos\Reporte.cshtml" />
+    <Content Include="Views\Account\Delete.cshtml" />
+    <Content Include="Views\Account\Details.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\_LayoutPage1.cshtml" />
+    <Content Include="Views\Account\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -395,8 +409,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104150456215_init1.resx">
-      <DependentUpon>202104150456215_init1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104151859279_initial.resx">
+      <DependentUpon>202104151859279_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

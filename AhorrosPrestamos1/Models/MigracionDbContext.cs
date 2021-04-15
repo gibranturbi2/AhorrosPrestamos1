@@ -21,6 +21,8 @@ namespace AhorrosPrestamos1.Models
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
          public virtual DbSet<Prestamo> prestamos { get; set; }
+         public virtual DbSet<Ahorros> ahorros { get; set; }
+         public virtual DbSet<Solicitud> solicitud { get; set; }
     }
 
     //public class MyEntity

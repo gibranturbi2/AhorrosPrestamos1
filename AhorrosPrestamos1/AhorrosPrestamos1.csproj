@@ -128,19 +128,22 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AhorrosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PrestamosController.cs" />
+    <Compile Include="Controllers\SolicitudController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104150034448_init.cs" />
-    <Compile Include="Migrations\202104150034448_init.Designer.cs">
-      <DependentUpon>202104150034448_init.cs</DependentUpon>
+    <Compile Include="Migrations\202104150026103_init.cs" />
+    <Compile Include="Migrations\202104150026103_init.Designer.cs">
+      <DependentUpon>202104150026103_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Ahorros.cs" />
     <Compile Include="Models\MigracionDbContext.cs" />
     <Compile Include="Models\Prestamo.cs" />
+    <Compile Include="Models\Solicitud.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -363,6 +366,12 @@
     <Content Include="Views\Prestamos\Details.cshtml" />
     <Content Include="Views\Prestamos\Edit.cshtml" />
     <Content Include="Views\Prestamos\Index.cshtml" />
+    <Content Include="Views\Ahorros\Create.cshtml" />
+    <Content Include="Views\Ahorros\Details.cshtml" />
+    <Content Include="Views\Ahorros\Index.cshtml" />
+    <Content Include="Views\Solicitud\Create.cshtml" />
+    <Content Include="Views\Solicitud\Details.cshtml" />
+    <Content Include="Views\Solicitud\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -381,8 +390,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104150034448_init.resx">
-      <DependentUpon>202104150034448_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104150026103_init.resx">
+      <DependentUpon>202104150026103_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -403,7 +412,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>56006</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44339/</IISUrl>
+          <IISUrl>https://localhost:44359/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

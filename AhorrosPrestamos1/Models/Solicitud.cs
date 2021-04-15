@@ -7,17 +7,17 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AhorrosPrestamos1.Models
 {
-    [Table("Ahorros")]
-    public class Ahorros
+    [Table("Solicitud")]
+    public class Solicitud
     {
         [Key]
-        public int ID_Saving { get; set; }
+        public int RequesterID { get; set; }
         [Display(Name = "Nombre")]
-        public string Name{ get; set; }
+        public string Name { get; set; }
         [Display(Name = "Apellido")]
-        public string Last_Name{ get; set; }
+        public string Last_Name { get; set; }
         [Display(Name = "Nacionalidad")]
-        public string Nationality  { get; set; }
+        public string Nationality { get; set; }
         [Display(Name = "Identificacion")]
         public string Identification { get; set; }
         [Display(Name = "Estado Civil")]
@@ -30,11 +30,5 @@ namespace AhorrosPrestamos1.Models
         public string Email { get; set; }
         [Display(Name = "Direccion")]
         public string Address { get; set; }
-        [Display(Name = "Tipo de Cuenta")]
-        public string Account_type { get; set; }
-        [Display(Name = "Moneda")]
-        public string Currency { get; set; }
-
-        
     }
 }

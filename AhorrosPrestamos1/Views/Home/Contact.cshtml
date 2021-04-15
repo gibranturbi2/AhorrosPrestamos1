@@ -1,17 +1,75 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿<div class="jumbotron">
+    <div class="container">
+        <h2>Tasa de cambio</h2>
+        <form class="form-inline">
+            <div class="form-group mb-2">
+                <input type="number" class="form-control" id="amount" />
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <select class="form-control" id="currency-1" required>
+                    <option>Peso</option>
+                    <option>EUR</option>
+                    <option>USD</option>
+                </select>
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <label>Comvertir a: </label>
+                <select class="form-control" id="currency-2" required>
+                    <option>EUR</option>
+                    <option>USD</option>
+                    <option>Peso</option>
+                </select>
+            </div>
+            <button class="btn calculate-btn btn-primary mb-2">Mostrar Resultado</button>
+        </form>
+        <div class="result">
+            <p>
+                <span class="given-amount"></span>
+                <span class="base-currency"></span>
+                <span class="final-result"></span>
+                <span class="second-currency"></span>
+            </p>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        var crrncy = { 'EUR': { 'Peso': 68.18, 'USD': 1.19 }, 'USD': { 'Peso': 56.96, 'EUR': 0.83 } }
+        var btn = document.querySelector('.calculate-btn');
+        var baseCurrencyInput = document.getElementById('currency-1');
+        var secondCurrencyInput = document.getElementById('currency-2');
+        var amountInput = document.getElementById('amount');
+        var toShowAmount = document.querySelector('.given-amount');
+        var toShowBase = document.querySelector('.base-currency');
+        var toShowSecond = document.querySelector('.second-currency');
+        var toShowResult = document.querySelector('.final-result');
+
+        function convertCurrency(event) {
+            event.preventDefault();
+            var amount = amountInput.value;
+            var from = baseCurrencyInput.value;
+            var to = secondCurrencyInput.value;
+            var result = 0;
+
+            try {
+                if (from == to) {
+                    result = amount;
+                } else {
+                    result = amount * crrncy[from][to];
+                }
+            }
+            catch (err) {
+                result = amount * (1 / crrncy[to][from]);
+            }
+
+            toShowAmount.innerHTML = amount;
+            toShowBase.textContent = from + ' = ';
+            toShowSecond.textContent = to;
+            toShowResult.textContent = result;
+        }
+
+        btn.addEventListener('click', convertCurrency);
+
+    </script>
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
-
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>

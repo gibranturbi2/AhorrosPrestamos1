@@ -340,6 +340,7 @@
     <Content Include="fonts\Simple-Line-Icons.eot" />
     <Content Include="fonts\Simple-Line-Icons.ttf" />
     <Content Include="fonts\Simple-Line-Icons.woff" />
+    <None Include="Properties\PublishProfiles\tareaadminhuascar.prestaquick.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

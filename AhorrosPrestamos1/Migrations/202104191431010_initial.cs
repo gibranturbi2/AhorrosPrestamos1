@@ -3,10 +3,20 @@ namespace AhorrosPrestamos1.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class init : DbMigration
+    public partial class initial : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Account",
+                c => new
+                    {
+                        ID_Login = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Password = c.String(),
+                    })
+                .PrimaryKey(t => t.ID_Login);
+            
             CreateTable(
                 "dbo.Ahorros",
                 c => new
@@ -70,6 +80,7 @@ namespace AhorrosPrestamos1.Migrations
             DropTable("dbo.Solicitud");
             DropTable("dbo.Prestamo");
             DropTable("dbo.Ahorros");
+            DropTable("dbo.Account");
         }
     }
 }
